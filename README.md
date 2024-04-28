@@ -32,7 +32,7 @@ gcloud auth application-default login
 To run the API server from `app.py`, follow these steps:
 
 ```bash
-uvicorn app:app --reload
+pipenv run uvicorn app:app --reload
 ```
 
 Then visit:

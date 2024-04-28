@@ -9,6 +9,7 @@ verify_ssl = true
 google-cloud-aiplatform = "*"
 fastapi = "*"
 uvicorn = "*"
+typing-extensions = "*"
 
 [requires]
 python_version = "3.11"
