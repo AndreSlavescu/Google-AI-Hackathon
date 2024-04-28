@@ -12,6 +12,9 @@ exec -l $SHELL
 
 # install bun >= 1.0.21 for ollama dependency
 curl -fsSL https://bun.sh/install | bash
+
+# support latest GCP AI platform
+pip install --upgrade google-cloud-aiplatform
 ```
 
 ### Build Ollama webUI
