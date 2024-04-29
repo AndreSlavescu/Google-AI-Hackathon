@@ -22,8 +22,22 @@ class GeminiProInterface:
         )
 
     def generate_response(self, prompt):
-        model_response = self.gemini_pro_model.generate_content(
-            [prompt],
-            generation_config=self.generation_config,
-        )
-        return model_response.text
+        try:
+            self.adjust_generation_settings(prompt)
+            model_response = self.gemini_pro_model.generate_content(
+                [prompt],
+                generation_config=self.generation_config,
+            )
+            return model_response.text
+        except Exception as e:
+            print(f"Error in model generation: {e}")
+            return prompt 
+
+    def adjust_generation_settings(self, prompt):
+        depth_indicator = len(prompt.split())  
+        if depth_indicator > 100:
+            self.generation_config.temperature = 0.5  
+            self.generation_config.top_k = 20
+        else:
+            self.generation_config.temperature = 0.9  
+            self.generation_config.top_k = 8
