@@ -17,6 +17,17 @@ curl -fsSL https://bun.sh/install | bash
 pip install --upgrade google-cloud-aiplatform
 ```
 
+### Setup Marqo
+Assuming you have Docker installed:
+```bash
+docker pull marqoai/marqo:latest
+docker rm -f marqo
+docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
+```
+```bash
+python setup_marqo.py
+```
+
 ### Build Ollama webUI
 
 ```bash
