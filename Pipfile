@@ -11,6 +11,7 @@ fastapi = "*"
 uvicorn = "*"
 marqo = "*"
 huggingface_hub = "*"
+typing-extensions = "*"
 
 [requires]
 python_version = "3.11"
