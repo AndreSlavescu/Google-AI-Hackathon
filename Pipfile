@@ -9,6 +9,8 @@ verify_ssl = true
 google-cloud-aiplatform = "*"
 fastapi = "*"
 uvicorn = "*"
+marqo = "*"
+huggingface_hub = "*"
 
 [requires]
 python_version = "3.11"
