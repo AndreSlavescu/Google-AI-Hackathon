@@ -4,9 +4,9 @@ from vertexai.generative_models import (
 )
 
 class GeminiProInterface:
-    def __init__(self):
+    def __init__(self, model_name="gemini-1.0-pro"):
         self.gemini_pro_model = GenerativeModel(
-            model_name="gemini-1.5-pro-preview-0409",
+            model_name=model_name,
             system_instruction=[
                 "You are an expert programmer with knowledge about all things related to model inference.",
                 "You are to set up a robust pipeline capable for running inference with open source models found on huggingface.",

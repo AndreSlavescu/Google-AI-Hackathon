@@ -17,12 +17,14 @@ curl -fsSL https://bun.sh/install | bash
 pip install --upgrade google-cloud-aiplatform
 ```
 
-### Build Ollama webUI
+### Build Open Web UI
 
 ```bash
 chmod +x ollama-reqs.sh
 ./ollama-reqs
 ```
+
+### Run Open Web UI
 
 ### Initialize Google Cloud API
 
@@ -30,14 +32,3 @@ chmod +x ollama-reqs.sh
 gcloud init
 gcloud auth application-default login
 ```
-### Running the API Server
-
-To run the API server from `app.py`, follow these steps:
-
-```bash
-pipenv run uvicorn app:app --reload
-```
-
-Then visit:
-
-[http://127.0.0.1:8000](http://127.0.0.1:8000)
