@@ -1,6 +1,7 @@
 import marqo
 from huggingface_hub import HfApi
 
+
 # setup marqo models index and add all documents. only needs to run once
 
 mq = marqo.Client(url="http://localhost:8882")
@@ -55,7 +56,7 @@ mq.index("models").add_documents(
         },
         {
             "model": "xlnet/xlnet-base-cased",
-            "description": "## Model description  XLNet is a new unsupervised language representation learning method based on a novel generalized permutation language modeling objective. Additionally, XLNet employs Transformer-XL as the backbone model, exhibiting excellent performance for language tasks involving long context. Overall, XLNet achieves state-of-the-art (SOTA) results on various downstream language tasks including question answering, natural language inference, sentiment analysis, and document ranking.  ## Intended uses & limitations  The model is mostly intended to be fine-tuned on a downstream task. See the [model hub](https://huggingface.co/models?search=xlnet) to look for fine-tuned versions on a task that interests you.  Note that this model is primarily aimed at being fine-tuned on tasks that use the whole sentence (potentially masked) to make decisions, such as sequence classification, token classification or question answering. For tasks such as text generation, you should look at models like GPT2.  "
+            "description": "## Model description  XLNet is a new unsupervised language representation learning method based on a novel generalized permutation language modeling objective. Additionally, XLNet employs Transformer-XL as the backbone model, exhibiting excellent performance for language tasks involving long context. Overall, XLNet achieves state-of-the-art (SOTA) results on various downstream language tasks including question answering, natural language inference, sentiment analysis, and document ranking.  ## Intended uses & limitations  The model is mostly intended to be fine-tuned on a downstream task. See the [model hub](https://huggingface.co/models?search=xlnet) to look for fine-tuned versions on a task that interests you.  Note that this model is primarily aimed at being fine-tuned on tasks that use the whole sentence (potentially masked) to make decisions, such as sequence classification, token classification or question answering."
         },
         {
             "model": "bigscience/bloom-1b7",
